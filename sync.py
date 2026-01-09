@@ -132,7 +132,7 @@ def create_notion_page(issue):
                 "select": {"name": issue["project"]["name"]} if issue["project"] else None
             },
             "Team": {
-                "select": {"name": issue["team"]["name"]} if issue["project"] else None
+                "select": {"name": issue["team"]["name"]} if issue["team"] else None
             },
             "Priority": {
                 "select": {"name": PRIORITY_MAP[issue["priority"]]}
@@ -170,7 +170,7 @@ def update_notion_page(page_id, issue):
                 "select": {"name": issue["project"]["name"]} if issue["project"] else None
             },
             "Team": {
-                "select": {"name": issue["team"]["name"]} if issue["project"] else None
+                "select": {"name": issue["team"]["name"]} if issue["team"] else None
             },
             "Priority": {
                 "select": {"name": PRIORITY_MAP[issue["priority"]]}
