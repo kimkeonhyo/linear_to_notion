@@ -46,7 +46,7 @@ def linear_query(query, variables=None):
     return res.json()
 
 def get_linear_issues():
-    since = (datetime.now(timezone.utc) - timedelta(days=1)).isoformat()
+    since = (datetime.now(timezone.utc) - timedelta(hours=1)).isoformat()
     
     query = """
     query ($since: DateTimeOrDuration!) {
