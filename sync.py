@@ -5,13 +5,15 @@ import inspect
 from dotenv import load_dotenv
 from notion_client import Client
 from datetime import datetime, timedelta, timezone
+from importlib.metadata import version
+
 
 # ─────────────────────
 # 환경 변수 로드
 # ─────────────────────
 load_dotenv()
 ## requirments 버전확인
-print("NOTION VERSION:", notion_client.__version__)
+print("NOTION VERSION:", version("notion-client"))
 print("NOTION PATH:", inspect.getfile(notion_client))
 
 LINEAR_API_KEY = os.getenv("LINEAR_API_KEY")
