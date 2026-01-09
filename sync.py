@@ -105,7 +105,6 @@ def find_notion_page(linear_id):
 def create_notion_page(issue):
     notion.pages.create(
         parent={"database_id": NOTION_DB_ID},
-        priority_value = PRIORITY_MAP.get(issue.get("priority"), "None"),
         properties={
             "ID": {
                 "rich_text": [{"text": {"content": issue["id"]}}]
