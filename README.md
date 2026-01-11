@@ -30,7 +30,8 @@ python[sync.py]
 cron --> python
 end
 
-Github_Actions <--(API)--> Linear 
+Github_Actions --(API)--> Linear 
+Linear --(태스크정보)--> Github_Actions
 Github_Actions --(API)--> Notion["Notion DB 업데이트"]
 ```
   1. Gtihub Actions 에서 매 정각마다 sync.py 실행
